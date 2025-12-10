@@ -1,3 +1,5 @@
+@use "variables" as *;
+@use "mixins" as *;
 /**
  * Estilos específicos por página
  * Uso de nesting: clases padre con modificadores y elementos hijos
@@ -121,6 +123,11 @@
       }
     }
   }
+}
+
+// Espaciado consistente entre hero del home y la siguiente sección
+.hero + .home-section {
+  padding-top: $spacing-lg;
 }
 
 .home-section--highlight {
@@ -282,7 +289,7 @@
 .discografia-page {
   .page-section--filters {
     background-color: $color-surface-elevated;
-    
+
     @include respond-to(mobile) {
       padding-block: $spacing-md;
     }
@@ -320,7 +327,7 @@
 
     &__title {
       font-size: $font-size-lg;
-      
+
       @include respond-to(tablet) {
         font-size: $font-size-base;
       }
@@ -383,9 +390,9 @@
     margin-inline: auto;
 
     @include respond-to(tablet) {
-      grid-template-columns: 1.3fr 1fr;
-      gap: 2rem;
-      max-width: 900px;
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+      max-width: 100%;
     }
 
     @include respond-to(mobile) {
@@ -400,10 +407,10 @@
 
     &__row {
       display: flex;
-      gap: $spacing-lg;
+      gap: $spacing-md;
 
       @include respond-to(tablet) {
-        gap: $spacing-md;
+        gap: $spacing-sm;
       }
 
       @include respond-to(mobile) {
@@ -440,7 +447,8 @@
         &:focus {
           outline: none;
           border-color: $color-secondary;
-          box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2), 0 4px 12px rgba(249, 115, 22, 0.15);
+          box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2),
+            0 4px 12px rgba(249, 115, 22, 0.15);
           transform: translateY(-2px);
         }
 
@@ -558,5 +566,110 @@
         white-space: nowrap;
       }
     }
+  }
+}
+
+/* Eliminado: estilos de Noticias para cumplir "inicio + 3 páginas" */
+.home-section--features {
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include respond-to(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .feature-item {
+    background-color: $color-surface-elevated;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+    @include soft-shadow(40px, 0.5);
+    @include fade-in-up(0s, 0.5s);
+  }
+
+  .feature-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.5rem;
+    color: $color-secondary;
+  }
+
+  .feature-title {
+    font-size: $font-size-lg;
+    margin-bottom: 0.25rem;
+  }
+
+  .feature-text {
+    font-size: $font-size-sm;
+    color: $color-muted;
+  }
+}
+
+.home-section--reviews {
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include respond-to(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .review {
+    background-color: $color-surface-elevated;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+    @include fade-in-up(0s, 0.5s);
+  }
+
+  .review-text {
+    font-size: $font-size-base;
+    margin-bottom: 0.5rem;
+  }
+
+  .review-author {
+    font-size: $font-size-sm;
+    color: $color-muted;
+  }
+}
+
+.home-section--cta {
+  .cta-card {
+    background: radial-gradient(circle at top, rgba(249, 115, 22, 0.12), rgba(2, 6, 23, 0.9));
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: $spacing-2xl;
+    text-align: center;
+    @include soft-shadow(40px, 0.5);
+    @include fade-in-up(0s, 0.6s);
+  }
+
+  .cta-title {
+    font-size: $font-size-2xl;
+    margin-bottom: 0.25rem;
+  }
+
+  .cta-text {
+    font-size: $font-size-sm;
+    color: $color-muted;
+    margin-bottom: $spacing-md;
+  }
+
+  .cta-actions {
+    display: flex;
+    gap: $spacing-sm;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }

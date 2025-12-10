@@ -1,273 +1,331 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sitio dedicado a la historia, discografía e integrantes de Soda Stereo." />
-  <title>Soda Stereo - Inicio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitio dedicado a la historia, discografía e integrantes de Soda Stereo."
+    />
+    <title>Soda Stereo - Inicio</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-  <link rel="shortcut icon" href="img/favicon.ico">
-  
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="img/favicon.ico" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Estilos propios -->
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <!-- Header -->
-  <header class="main-header">
-    <nav class="navbar navbar-expand-lg main-nav">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-          <img src="img/logo_soda.png" alt="Logo de Soda Stereo" class="logo-img" />
-          <span class="logo-text">Rock en español</span>
-        </a>
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+    <!-- Header -->
+    <header class="main-header">
+      <nav
+        class="navbar navbar-expand-lg main-nav"
+        role="navigation"
+        aria-label="Principal"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="index.html"
+          >
+            <img
+              src="img/logo_soda.png"
+              alt="Logo de Soda Stereo"
+              class="logo-img"
+            />
+            <span class="logo-text">Rock en español</span>
+          </a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Mostrar navegación"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Mostrar navegación"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/banda.html">Banda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/discografia.html">Discografía</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero__overlay"></div>
-      <div class="container">
-        <div class="hero__content">
-          <h1 class="hero__title">Soda Stereo: historia, discos y legado</h1>
-          <p class="hero__subtitle">
-            Un recorrido por la obra de una de las bandas más influyentes del rock en español:
-            álbumes, giras, integrantes y momentos clave que marcaron a toda Latinoamérica.
-          </p>
-          <div class="hero__actions">
-            <a href="pages/discografia.html" class="btn btn--primary">Ver discografía</a>
-            <a href="pages/banda.html" class="btn btn--secondary">Conocer a la banda</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE SODA STEREO -->
-    <section class="home-section">
-      <div class="container">
-        <h2 class="section-title">Sobre Soda Stereo</h2>
-
-        <div class="about-grid">
-          <div class="about-grid__text">
-            <p>
-              Soda Stereo fue una banda argentina de rock formada en Buenos Aires en 1982 por
-              Gustavo Cerati, Zeta Bosio y Charly Alberti. Es considerada una de las bandas
-              más importantes e influyentes del rock latinoamericano.
-            </p>
-            <p>
-              A lo largo de su carrera, exploraron distintos sonidos: new wave, pop, rock
-              alternativo y experimentación sonora, dejando discos clave como
-              <strong>Signos</strong>, <strong>Canción Animal</strong> y
-              <strong>Sueño Stereo</strong>.
-            </p>
-
-            <ul class="about-list">
-              <li>Formación: Buenos Aires, Argentina.</li>
-              <li>Actividad principal: 1982 - 1997.</li>
-              <li>Reencuentro histórico: gira Me Verás Volver (2007).</li>
-              <li>Proyecto homenaje: Gracias Totales - Soda Stereo.</li>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/banda.html">Banda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/discografia.html"
+                  >Discografía</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+              </li>
             </ul>
           </div>
+        </div>
+      </nav>
+    </header>
 
-          <aside class="about-grid__data">
-            <dl class="data-list">
-              <div class="data-list__item">
-                <dt>País de origen</dt>
-                <dd>Argentina</dd>
-              </div>
-              <div class="data-list__item">
-                <dt>Años de actividad</dt>
-                <dd>1982 - 1997</dd>
-              </div>
-              <div class="data-list__item">
-                <dt>Integrantes</dt>
-                <dd>Cerati · Bosio · Alberti</dd>
-              </div>
-              <div class="data-list__item">
-                <dt>Álbumes de estudio</dt>
-                <dd>7</dd>
-              </div>
-              <div class="data-list__item">
-                <dt>Gira de reunión</dt>
-                <dd>Me Verás Volver (2007)</dd>
-              </div>
-            </dl>
-
-            <p class="about-grid__note">
-              Los datos corresponden a la discografía y biografía oficial de la banda.
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__title">Soda Stereo: historia, discos y legado</h1>
+            <p class="hero__subtitle">
+              Un recorrido por la obra de una de las bandas más influyentes del
+              rock en español: álbumes, giras, integrantes y momentos clave que
+              marcaron a toda Latinoamérica.
             </p>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- NOTICIAS DESTACADAS -->
-    <section class="home-section home-section--highlight">
-      <div class="container">
-        <h2 class="section-title">Noticias destacadas</h2>
-
-        <div class="cards-grid">
-          <!-- Noticia 1 -->
-          <article class="card card--noticia">
-            <img
-              class="card__img"
-              src="img/noticia_1.jpg"
-              alt="Soda Stereo en la gira Me Verás Volver"
-            />
-            <div class="card__body">
-              <h3 class="card__title">Me Verás Volver (2007)</h3>
-              <p class="card__text">
-                En 2007 los tres integrantes se reencontraron para una gira histórica por
-                América Latina que marcó el regreso de la banda después de 10 años.
-              </p>
-              <p class="card__link">
-                <a
-                  href="https://es.wikipedia.org/wiki/Me_ver%C3%A1s_volver_2007"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Leer más sobre la gira
-                </a>
-              </p>
-              <span class="card__tag">Reencuentro</span>
+            <div class="hero__actions">
+              <a href="pages/discografia.html" class="btn btn--primary"
+                >Ver discografía</a
+              >
+              <a href="pages/banda.html" class="btn btn--secondary"
+                >Conocer a la banda</a
+              >
             </div>
-          </article>
-
-          <!-- Noticia 2 -->
-          <article class="card card--noticia">
-            <img
-              class="card__img"
-              src="img/noticia_2.jpg"
-              alt="Ediciones en vinilo de Soda Stereo"
-            />
-            <div class="card__body">
-              <h3 class="card__title">Ediciones en vinilo</h3>
-              <p class="card__text">
-                Varios álbumes de Soda Stereo fueron reeditados en vinilo, con nuevo arte y
-                un trabajo de remasterización pensado para coleccionistas y fanáticos.
-              </p>
-              <p class="card__link">
-                <a
-                  href="https://www.concierto.cl/2015/11/reediciones-en-vinilo-de-soda-stereo-ya-estan-disponibles/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Ver nota sobre las reediciones
-                </a>
-              </p>
-              <span class="card__tag">Discografía</span>
-            </div>
-          </article>
-
-          <!-- Noticia 3 -->
-          <article class="card card--noticia">
-            <img
-              class="card__img"
-              src="img/noticia_3.jpg"
-              alt="Homenajes y tributos a Soda Stereo"
-            />
-            <div class="card__body">
-              <h3 class="card__title">Homenajes y tributos</h3>
-              <p class="card__text">
-                Conciertos y espectáculos como <strong>Gracias Totales</strong> mantuvieron
-                viva la música de Soda Stereo con la participación de artistas invitados de
-                toda Latinoamérica.
-              </p>
-              <p class="card__link">
-                <a
-                  href="https://es.wikipedia.org/wiki/Gracias_Totales_-_Soda_Stereo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Leer más sobre Gracias Totales
-                </a>
-              </p>
-              <span class="card__tag">Homenajes</span>
-            </div>
-          </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FRASES ICÓNICAS -->
-    <section class="home-section home-section--dark">
-      <div class="container">
-        <h2 class="section-title">Frases icónicas</h2>
+      <!-- SOBRE SODA STEREO -->
+      <section class="home-section">
+        <div class="container">
+          <h2 class="section-title">Sobre Soda Stereo</h2>
 
-        <div class="quotes-list">
-          <p class="quote-item">"Ella usó mi cabeza como un revólver."</p>
-          <p class="quote-item">"Me verás volar por la ciudad de la furia."</p>
-          <p class="quote-item">"No mires por favor y no prendas la luz."</p>
-          <p class="quote-item">"Nada más queda."</p>
+          <div class="about-grid">
+            <div class="about-grid__text">
+              <p>
+                Soda Stereo fue una banda argentina de rock formada en Buenos
+                Aires en 1982 por Gustavo Cerati, Zeta Bosio y Charly Alberti.
+                Es considerada una de las bandas más importantes e influyentes
+                del rock latinoamericano.
+              </p>
+              <p>
+                A lo largo de su carrera, exploraron distintos sonidos: new
+                wave, pop, rock alternativo y experimentación sonora, dejando
+                discos clave como
+                <strong>Signos</strong>, <strong>Canción Animal</strong> y
+                <strong>Sueño Stereo</strong>.
+              </p>
+
+              <ul class="about-list">
+                <li>Formación: Buenos Aires, Argentina.</li>
+                <li>Actividad principal: 1982 - 1997.</li>
+                <li>Reencuentro histórico: gira Me Verás Volver (2007).</li>
+                <li>Proyecto homenaje: Gracias Totales - Soda Stereo.</li>
+              </ul>
+            </div>
+
+            <aside class="about-grid__data">
+              <dl class="data-list">
+                <div class="data-list__item">
+                  <dt>País de origen</dt>
+                  <dd>Argentina</dd>
+                </div>
+                <div class="data-list__item">
+                  <dt>Años de actividad</dt>
+                  <dd>1982 - 1997</dd>
+                </div>
+                <div class="data-list__item">
+                  <dt>Integrantes</dt>
+                  <dd>Cerati · Bosio · Alberti</dd>
+                </div>
+                <div class="data-list__item">
+                  <dt>Álbumes de estudio</dt>
+                  <dd>7</dd>
+                </div>
+                <div class="data-list__item">
+                  <dt>Gira de reunión</dt>
+                  <dd>Me Verás Volver (2007)</dd>
+                </div>
+              </dl>
+
+              <p class="about-grid__note">
+                Los datos corresponden a la discografía y biografía oficial de
+                la banda.
+              </p>
+            </aside>
+          </div>
         </div>
+      </section>
+
+      <!-- NOTICIAS (restaurada) -->
+      <section class="home-section">
+        <div class="container">
+          <h2 class="section-title">Noticias</h2>
+          <div class="cards-grid">
+            <article class="card card--noticia">
+              <img
+                class="card__img"
+                src="img/noticia_1.jpg"
+                alt="Soda Stereo en la gira Me Verás Volver"
+              />
+              <div class="card__body">
+                <h3 class="card__title">Me Verás Volver (2007)</h3>
+                <p class="card__text">
+                  La gira de reunión que recorrió América con shows en estadios
+                  y una puesta en escena inolvidable.
+                </p>
+                <p class="card__link">
+                  <a
+                    href="https://es.wikipedia.org/wiki/Me_ver%C3%A1s_volver_2007"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Leer más</a
+                  >
+                </p>
+                <span class="card__tag">Giras</span>
+              </div>
+            </article>
+            <article class="card card--noticia">
+              <img
+                class="card__img"
+                src="img/noticia_2.jpg"
+                alt="Reediciones de Soda Stereo"
+              />
+              <div class="card__body">
+                <h3 class="card__title">Reediciones remasterizadas</h3>
+                <p class="card__text">
+                  Ediciones especiales con audio mejorado y material extra para
+                  coleccionistas.
+                </p>
+                <p class="card__link">
+                  <a
+                    href="https://es.wikipedia.org/wiki/Anexo:Discograf%C3%ADa_de_Soda_Stereo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Leer más</a
+                  >
+                </p>
+                <span class="card__tag">Reediciones</span>
+              </div>
+            </article>
+            <article class="card card--noticia">
+              <img
+                class="card__img"
+                src="img/noticia_3.jpg"
+                alt="Homenajes a Soda Stereo"
+              />
+              <div class="card__body">
+                <h3 class="card__title">Homenajes y tributos</h3>
+                <p class="card__text">
+                  Artistas de toda la región celebran el legado de la banda con
+                  versiones y shows especiales.
+                </p>
+                <p class="card__link">
+                  <a
+                    href="https://es.wikipedia.org/wiki/Tributo_a_Soda_Stereo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Leer más</a
+                  >
+                </p>
+                <span class="card__tag">Homenajes</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FRASES ICÓNICAS -->
+      <section class="home-section home-section--dark">
+        <div class="container">
+          <h2 class="section-title">Frases icónicas</h2>
+          <div class="quotes-list">
+            <p class="quote-item">"Ella usó mi cabeza como un revólver."</p>
+            <p class="quote-item">
+              "Me verás volar por la ciudad de la furia."
+            </p>
+            <p class="quote-item">"No mires por favor y no prendas la luz."</p>
+            <p class="quote-item">"Nada más queda."</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Soda Stereo. Todos los derechos reservados.</p>
+      <div class="redes-sociales">
+        <a
+          href="https://www.facebook.com/sodastereo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.463h-1.26c-1.242 0-1.63.771-1.63 1.562V12h2.773l-.443 2.891h-2.33v6.987C18.343 21.128 22 16.991 22 12z"
+            ></path>
+          </svg>
+          Facebook
+        </a>
+        <a
+          href="https://www.instagram.com/sodastereo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm6.5-2a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"
+            ></path>
+          </svg>
+          Instagram
+        </a>
+        <a
+          href="https://twitter.com/sodastereo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83z"
+            ></path>
+          </svg>
+          Twitter
+        </a>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Soda Stereo. Todos los derechos reservados.</p>
-    <div class="redes-sociales">
-      <a href="https://www.facebook.com/sodastereo" target="_blank" rel="noopener noreferrer">
-        Facebook
-      </a>
-      <a href="https://www.instagram.com/sodastereo" target="_blank" rel="noopener noreferrer">
-        Instagram
-      </a>
-      <a href="https://twitter.com/sodastereo" target="_blank" rel="noopener noreferrer">
-        Twitter
-      </a>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  ></script>
-</body>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

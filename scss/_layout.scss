@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "sass:color";
 /**
  * Header y navegación
  * Uso de nesting: .main-nav .navbar-nav .nav-link con &::after, &:hover, &.active
@@ -14,13 +17,13 @@
   padding-block: 0.5rem;
 
   .logo-img {
-    height: 32px;
+    height: 28px;
     width: auto;
     display: block;
     filter: brightness(0.9) drop-shadow(0 0 6px rgba(0, 0, 0, 0.7));
-    
+
     @include respond-to(mobile) {
-      height: 28px;
+      height: 24px;
     }
   }
 
@@ -30,7 +33,7 @@
     text-transform: uppercase;
     font-size: $font-size-xs;
     color: $color-muted;
-    
+
     @include respond-to(mobile) {
       font-size: 0.65rem;
     }
@@ -44,7 +47,7 @@
   // Navbar toggler (hamburguesa) - color blanco para mobile
   .navbar-toggler {
     border-color: rgba($color-light, 0.3);
-    
+
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
@@ -80,7 +83,12 @@
         bottom: 0;
         width: 0;
         height: 2px;
-        background: linear-gradient(90deg, transparent, $color-secondary, transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          $color-secondary,
+          transparent
+        );
         transform: translateX(-50%);
         @include smooth-transition(width, $transition-base);
       }
@@ -121,10 +129,11 @@
   // Nesting: .logo-img con &:hover dentro de .main-nav
   .logo-img {
     @include smooth-transition(transform filter, $transition-base);
+    will-change: transform;
 
     &:hover {
-      transform: rotate(5deg) scale(1.1);
-      filter: brightness(1.15) drop-shadow(0 0 15px rgba(249, 115, 22, 0.7));
+      transform: rotate(3deg) scale(1.05);
+      filter: brightness(1.1) drop-shadow(0 0 10px rgba(249, 115, 22, 0.5));
     }
   }
 }
@@ -147,13 +156,17 @@
   border-bottom: 1px solid $color-border;
   position: relative;
   overflow: hidden;
-  
+
   // Overlay oscuro para mejorar legibilidad del texto sobre imagen
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(10, 14, 26, 0.85));
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(10, 14, 26, 0.85)
+    );
     z-index: 0;
   }
 
@@ -213,7 +226,8 @@
         rgba(0, 0, 0, 0.8)
       ),
       url("../img/cerati_perfil.jpg") center/cover no-repeat;
-    
+    border-bottom: none;
+
     @include respond-to(mobile) {
       background-position: center 30%;
     }
@@ -227,7 +241,8 @@
         rgba(0, 0, 0, 0.8)
       ),
       url("../img/tapa_signos.jpg") center/cover no-repeat;
-    
+    border-bottom: none;
+
     @include respond-to(mobile) {
       background-position: center;
     }
@@ -241,11 +256,14 @@
         rgba(0, 0, 0, 0.8)
       ),
       url("../img/soda_destacada.jpg") center/cover no-repeat;
-    
+    border-bottom: none;
+
     @include respond-to(mobile) {
       background-position: center;
     }
   }
+
+  // Eliminado: hero Noticias para cumplir "inicio + 3 páginas"
 }
 
 // -------- Secciones genéricas --------
@@ -264,13 +282,19 @@
   }
 }
 
+// Espaciado entre hero y contenido siguiente (coherencia visual)
+.page-hero + .page-section,
+.page-hero + .home-section {
+  padding-top: $spacing-lg;
+}
+
 .page-section--alt,
 .home-section--highlight {
   background-color: $color-surface-elevated;
 }
 
 .home-section--dark {
-  background-color: darken($color-surface, 4%);
+  background-color: color.adjust($color-surface, $lightness: -4%);
 }
 
 /**
@@ -301,11 +325,15 @@ footer {
     flex-wrap: wrap;
 
     a {
+      color: $color-muted;
       opacity: 0.9;
       @include smooth-transition(all, $transition-base);
       position: relative;
       padding: $spacing-xs $spacing-sm;
       border-radius: $radius-sm;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
 
       // Nesting con &:hover
       &:hover {
@@ -321,6 +349,13 @@ footer {
         &:nth-child(#{$i}) {
           @include fade-in-up(#{$i * 0.1}s, 0.5s);
         }
+      }
+
+      .social-icon {
+        width: 20px;
+        height: 20px;
+        flex: 0 0 20px;
+        fill: currentColor;
       }
     }
   }

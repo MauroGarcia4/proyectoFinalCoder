@@ -22,3 +22,5 @@
   font-size: $font-size-base;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
+@use "variables" as *;
+@use "mixins" as *;

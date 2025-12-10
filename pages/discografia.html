@@ -1,371 +1,502 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Discografía completa de Soda Stereo: álbumes, canciones y giras destacadas." />
-  <title>Soda Stereo - Discografía</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discografía completa de Soda Stereo: álbumes, canciones y giras destacadas."
+    />
+    <title>Soda Stereo - Discografía</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
-  <link rel="shortcut icon" href="../img/favicon.ico">
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="../img/favicon.ico" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Estilos propios -->
-  <link rel="stylesheet" href="../css/styles.css" />
-</head>
-<body>
-  <!-- Header -->
-  <header class="main-header">
-    <nav class="navbar navbar-expand-lg main-nav">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
-          <img src="../img/logo_soda.png" alt="Logo de Soda Stereo" class="logo-img" />
-          <span class="logo-text">Rock en español</span>
-        </a>
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+    <!-- Header -->
+    <header class="main-header">
+      <nav
+        class="navbar navbar-expand-lg main-nav"
+        role="navigation"
+        aria-label="Principal"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="../index.html"
+          >
+            <img
+              src="../img/logo_soda.png"
+              alt="Logo de Soda Stereo"
+              class="logo-img"
+            />
+            <span class="logo-text">Rock en español</span>
+          </a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Mostrar navegación"
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Mostrar navegación"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="banda.html">Banda</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="discografia.html"
+                  aria-current="page"
+                  >Discografía</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="discografia-page">
+      <!-- HERO DISCOGRAFÍA -->
+      <section class="page-hero page-hero--discografia">
+        <div class="container">
+          <h1 class="page-hero__title">Discografía</h1>
+          <p class="page-hero__subtitle">
+            Un repaso por los álbumes de estudio más importantes de Soda Stereo,
+            con algunos de sus temas más representativos y enlaces a los discos
+            completos.
+          </p>
+        </div>
+      </section>
+
+      <!-- FILTROS (decorativos) -->
+      <section class="page-section page-section--filters">
+        <div class="container">
+          <h2 class="section-title">Explorar por década</h2>
+
+          <div class="chips" id="chips-filtro" aria-label="Filtros de década">
+            <button
+              class="chip chip--active"
+              type="button"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              Todos
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-filter="80"
+              aria-pressed="false"
+            >
+              Años 80
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-filter="90"
+              aria-pressed="false"
+            >
+              Años 90
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ÁLBUMES -->
+      <section class="page-section">
+        <div class="container">
+          <h2 class="section-title">Álbumes de estudio</h2>
+
+          <div class="discos-grid">
+            <!-- SODA STEREO (1984) -->
+            <article class="disco-card" data-decade="80" data-year="1984">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Soda Stereo</h3>
+                <span class="badge badge--ochentas">1984</span>
+              </div>
+              <p class="disco-card__meta">Álbum de estudio</p>
+              <p class="disco-card__desc">
+                Debut de la banda, con un sonido influenciado por el new wave y
+                el post-punk, que presentó a Soda Stereo en toda la región.
+              </p>
+              <ul class="disco-card__tracks">
+                <li>¿Por qué no puedo ser del Jet-Set?</li>
+                <li>Sobredosis de TV</li>
+                <li>Te hacen falta vitaminas</li>
+                <li>Trátame suavemente</li>
+              </ul>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/album/6kHPvk54969ASAIfDRUfwv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Escuchar álbum en Spotify
+                </a>
+              </p>
+            </article>
+
+            <!-- NADA PERSONAL (1985) -->
+            <article class="disco-card" data-decade="80" data-year="1985">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Nada Personal</h3>
+                <span class="badge badge--ochentas">1985</span>
+              </div>
+              <p class="disco-card__meta">Álbum de estudio</p>
+              <p class="disco-card__desc">
+                Disco que consolidó el sonido de la banda y los llevó a una
+                audiencia masiva en toda Latinoamérica.
+              </p>
+              <ul class="disco-card__tracks">
+                <li>Nada personal</li>
+                <li>Cuando pase el temblor</li>
+                <li>Juegos de seducción</li>
+                <li>Imágenes retro</li>
+              </ul>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/album/0hyq754QnaKHYpH32QnWqs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Escuchar álbum en Spotify
+                </a>
+              </p>
+            </article>
+
+            <!-- SIGNOS (1986) -->
+            <article class="disco-card" data-decade="80" data-year="1986">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Signos</h3>
+                <span class="badge badge--ochentas">1986</span>
+              </div>
+              <p class="disco-card__meta">Álbum de estudio</p>
+              <p class="disco-card__desc">
+                Uno de los discos más influyentes del rock en español, con un
+                sonido más oscuro y sofisticado.
+              </p>
+              <ul class="disco-card__tracks">
+                <li>Signos</li>
+                <li>Persiana americana</li>
+                <li>Prófugos</li>
+                <li>Final caja negra</li>
+              </ul>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/album/7s2lDvm4FwnWE5RXEoY8Gi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Escuchar álbum en Spotify
+                </a>
+              </p>
+            </article>
+
+            <!-- DOBLE VIDA (1988) -->
+            <article class="disco-card" data-decade="80" data-year="1988">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Doble Vida</h3>
+                <span class="badge badge--ochentas">1988</span>
+              </div>
+              <p class="disco-card__meta">Álbum de estudio</p>
+              <p class="disco-card__desc">
+                Grabado en Nueva York, con un sonido más cercano al funk y al
+                pop, producido por Carlos Alomar.
+              </p>
+              <ul class="disco-card__tracks">
+                <li>En la ciudad de la furia</li>
+                <li>Lo que sangra (La cúpula)</li>
+                <li>Corazón delator</li>
+                <li>Picnic en el 4° B</li>
+              </ul>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/album/0mEY1U7SZdIwDWylFm2UC4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Escuchar álbum en Spotify
+                </a>
+              </p>
+            </article>
+
+            <!-- CANCIÓN ANIMAL (1990) -->
+            <article class="disco-card" data-decade="90" data-year="1990">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Canción Animal</h3>
+                <span class="badge badge--noventas">1990</span>
+              </div>
+              <p class="disco-card__meta">Álbum de estudio</p>
+              <p class="disco-card__desc">
+                Considerado por muchos como el mejor disco de la banda, con un
+                rock más crudo y directo.
+              </p>
+              <ul class="disco-card__tracks">
+                <li>De música ligera</li>
+                <li>Un millón de años luz</li>
+                <li>Té para tres</li>
+                <li>Canción animal</li>
+              </ul>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/album/4bTGicFQB7ll0o5HN5R1T2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Escuchar álbum en Spotify
+                </a>
+              </p>
+            </article>
+
+            <!-- DYNAMO (1992) -->
+            <article class="disco-card" data-decade="90" data-year="1992">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Dynamo</h3>
+                <span class="badge badge--noventas">1992</span>
+              </div>
+              <p class="disco-card__meta">Álbum de estudio</p>
+              <p class="disco-card__desc">
+                Disco experimental donde exploran sonidos cercanos al shoegaze,
+                al noise y al rock alternativo.
+              </p>
+              <ul class="disco-card__tracks">
+                <li>Primavera 0</li>
+                <li>En remolinos</li>
+                <li>Luna roja</li>
+                <li>Claroscuro</li>
+              </ul>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/album/4bfwXuecOmNVlPM5RStAiQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Escuchar álbum en Spotify
+                </a>
+              </p>
+            </article>
+
+            <!-- SUEÑO STEREO (1995) -->
+            <article class="disco-card" data-decade="90" data-year="1995">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Sueño Stereo</h3>
+                <span class="badge badge--noventas">1995</span>
+              </div>
+              <p class="disco-card__meta">Álbum de estudio</p>
+              <p class="disco-card__desc">
+                Último álbum de estudio de Soda Stereo, con un sonido más
+                experimental y sofisticado.
+              </p>
+              <ul class="disco-card__tracks">
+                <li>Ella usó mi cabeza como un revólver</li>
+                <li>Zoom</li>
+                <li>Paseando por Roma</li>
+                <li>Crema de estrellas</li>
+              </ul>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/album/1A3VRbn7Kto2ov0LkSY0eg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Escuchar álbum en Spotify
+                </a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- GIRAS DESTACADAS (TABLA) -->
+      <section class="page-section page-section--alt">
+        <div class="container">
+          <h2 class="section-title">Giras destacadas</h2>
+
+          <div class="table-wrapper">
+            <table class="tours-table">
+              <thead>
+                <tr>
+                  <th>Gira</th>
+                  <th>Años</th>
+                  <th>Álbum asociado</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Gira Signos</td>
+                  <td>1986–1987</td>
+                  <td>Signos</td>
+                  <td>
+                    Gira continental que consolidó a la banda en toda
+                    Latinoamérica, con presentaciones en grandes escenarios.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Gira Animal</td>
+                  <td>1990–1992</td>
+                  <td>Canción Animal</td>
+                  <td>
+                    Tour maratónico por América y Europa, incluyendo el
+                    histórico show en la Av. 9 de Julio en Buenos Aires.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Me Verás Volver</td>
+                  <td>2007</td>
+                  <td>Repertorio de toda su carrera</td>
+                  <td>
+                    Gira de reunión con múltiples fechas en estadios, que repasó
+                    los grandes hits de Soda Stereo.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Soda Stereo. Todos los derechos reservados.</p>
+      <div class="redes-sociales">
+        <a
+          href="https://www.facebook.com/sodastereo"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="banda.html">Banda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="discografia.html">Discografía</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </div>
+          <svg class="social-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.463h-1.26c-1.242 0-1.63.771-1.63 1.562V12h2.773l-.443 2.891h-2.33v6.987C18.343 21.128 22 16.991 22 12z"
+            ></path>
+          </svg>
+          Facebook
+        </a>
+        <a
+          href="https://www.instagram.com/sodastereo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm6.5-2a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"
+            ></path>
+          </svg>
+          Instagram
+        </a>
+        <a
+          href="https://twitter.com/sodastereo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="social-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83z"
+            ></path>
+          </svg>
+          Twitter
+        </a>
       </div>
-    </nav>
-  </header>
+    </footer>
 
-  <main class="discografia-page">
-    <!-- HERO DISCOGRAFÍA -->
-    <section class="page-hero page-hero--discografia">
-      <div class="container">
-        <h1 class="page-hero__title">Discografía</h1>
-        <p class="page-hero__subtitle">
-          Un repaso por los álbumes de estudio más importantes de Soda Stereo, con algunos de
-          sus temas más representativos y enlaces a los discos completos.
-        </p>
-      </div>
-    </section>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (function () {
+        const chips = document.querySelectorAll("#chips-filtro .chip");
+        const cards = document.querySelectorAll(".disco-card");
+        const statusEl = document.createElement("p");
+        statusEl.className = "filter-status";
+        statusEl.style.marginTop = "0.5rem";
+        statusEl.style.opacity = "0.85";
+        const chipsContainer = document.getElementById("chips-filtro");
+        chipsContainer?.after(statusEl);
 
-    <!-- FILTROS (decorativos) -->
-    <section class="page-section page-section--filters">
-      <div class="container">
-        <h2 class="section-title">Explorar por década</h2>
+        function applyFilter(filter) {
+          try {
+            let visibleCount = 0;
+            cards.forEach((card) => {
+              const decade = card.getAttribute("data-decade");
+              const shouldShow = filter === "all" || decade === filter;
+              card.style.display = shouldShow ? "" : "none";
+              if (shouldShow) visibleCount++;
+            });
+            statusEl.textContent =
+              visibleCount === 0
+                ? "No hay resultados para el filtro seleccionado."
+                : `Mostrando ${visibleCount} ${
+                    visibleCount === 1 ? "álbum" : "álbumes"
+                  }.`;
+          } catch (err) {
+            console.error("Error aplicando filtro de discografía:", err);
+            statusEl.textContent =
+              "Ocurrió un error al aplicar el filtro. Mostrando todos los álbumes.";
+            cards.forEach((card) => (card.style.display = ""));
+          }
+        }
 
-        <div class="chips">
-          <button class="chip chip--active" type="button">Todos</button>
-          <button class="chip" type="button">Años 80</button>
-          <button class="chip" type="button">Años 90</button>
-        </div>
-      </div>
-    </section>
+        chips.forEach((chip) => {
+          chip.addEventListener("click", () => {
+            const filter = chip.getAttribute("data-filter") || "all";
+            chips.forEach((c) => {
+              c.classList.toggle("chip--active", c === chip);
+              c.setAttribute("aria-pressed", c === chip ? "true" : "false");
+            });
+            applyFilter(filter);
+          });
+        });
 
-    <!-- ÁLBUMES -->
-    <section class="page-section">
-      <div class="container">
-        <h2 class="section-title">Álbumes de estudio</h2>
-
-        <div class="discos-grid">
-          <!-- SODA STEREO (1984) -->
-          <article class="disco-card">
-            <div class="disco-card__header">
-              <h3 class="disco-card__title">Soda Stereo</h3>
-              <span class="badge badge--ochentas">1984</span>
-            </div>
-            <p class="disco-card__meta">Álbum de estudio</p>
-            <p class="disco-card__desc">
-              Debut de la banda, con un sonido influenciado por el new wave y el post-punk,
-              que presentó a Soda Stereo en toda la región.
-            </p>
-            <ul class="disco-card__tracks">
-              <li>¿Por qué no puedo ser del Jet-Set?</li>
-              <li>Sobredosis de TV</li>
-              <li>Te hacen falta vitaminas</li>
-              <li>Trátame suavemente</li>
-            </ul>
-            <p class="disco-card__links">
-              <a
-                href="https://open.spotify.com/album/6kHPvk54969ASAIfDRUfwv"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Escuchar álbum en Spotify
-              </a>
-            </p>
-          </article>
-
-          <!-- NADA PERSONAL (1985) -->
-          <article class="disco-card">
-            <div class="disco-card__header">
-              <h3 class="disco-card__title">Nada Personal</h3>
-              <span class="badge badge--ochentas">1985</span>
-            </div>
-            <p class="disco-card__meta">Álbum de estudio</p>
-            <p class="disco-card__desc">
-              Disco que consolidó el sonido de la banda y los llevó a una audiencia masiva en
-              toda Latinoamérica.
-            </p>
-            <ul class="disco-card__tracks">
-              <li>Nada personal</li>
-              <li>Cuando pase el temblor</li>
-              <li>Juegos de seducción</li>
-              <li>Imágenes retro</li>
-            </ul>
-            <p class="disco-card__links">
-              <a
-                href="https://open.spotify.com/album/0hyq754QnaKHYpH32QnWqs"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Escuchar álbum en Spotify
-              </a>
-            </p>
-          </article>
-
-          <!-- SIGNOS (1986) -->
-          <article class="disco-card">
-            <div class="disco-card__header">
-              <h3 class="disco-card__title">Signos</h3>
-              <span class="badge badge--ochentas">1986</span>
-            </div>
-            <p class="disco-card__meta">Álbum de estudio</p>
-            <p class="disco-card__desc">
-              Uno de los discos más influyentes del rock en español, con un sonido más oscuro
-              y sofisticado.
-            </p>
-            <ul class="disco-card__tracks">
-              <li>Signos</li>
-              <li>Persiana americana</li>
-              <li>Prófugos</li>
-              <li>Final caja negra</li>
-            </ul>
-            <p class="disco-card__links">
-              <a
-                href="https://open.spotify.com/album/7s2lDvm4FwnWE5RXEoY8Gi"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Escuchar álbum en Spotify
-              </a>
-            </p>
-          </article>
-
-          <!-- DOBLE VIDA (1988) -->
-          <article class="disco-card">
-            <div class="disco-card__header">
-              <h3 class="disco-card__title">Doble Vida</h3>
-              <span class="badge badge--ochentas">1988</span>
-            </div>
-            <p class="disco-card__meta">Álbum de estudio</p>
-            <p class="disco-card__desc">
-              Grabado en Nueva York, con un sonido más cercano al funk y al pop, producido
-              por Carlos Alomar.
-            </p>
-            <ul class="disco-card__tracks">
-              <li>En la ciudad de la furia</li>
-              <li>Lo que sangra (La cúpula)</li>
-              <li>Corazón delator</li>
-              <li>Picnic en el 4° B</li>
-            </ul>
-            <p class="disco-card__links">
-              <a
-                href="https://open.spotify.com/album/0mEY1U7SZdIwDWylFm2UC4"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Escuchar álbum en Spotify
-              </a>
-            </p>
-          </article>
-
-          <!-- CANCIÓN ANIMAL (1990) -->
-          <article class="disco-card">
-            <div class="disco-card__header">
-              <h3 class="disco-card__title">Canción Animal</h3>
-              <span class="badge badge--noventas">1990</span>
-            </div>
-            <p class="disco-card__meta">Álbum de estudio</p>
-            <p class="disco-card__desc">
-              Considerado por muchos como el mejor disco de la banda, con un rock más crudo y
-              directo.
-            </p>
-            <ul class="disco-card__tracks">
-              <li>De música ligera</li>
-              <li>Un millón de años luz</li>
-              <li>Té para tres</li>
-              <li>Canción animal</li>
-            </ul>
-            <p class="disco-card__links">
-              <a
-                href="https://open.spotify.com/album/4bTGicFQB7ll0o5HN5R1T2"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Escuchar álbum en Spotify
-              </a>
-            </p>
-          </article>
-
-          <!-- DYNAMO (1992) -->
-          <article class="disco-card">
-            <div class="disco-card__header">
-              <h3 class="disco-card__title">Dynamo</h3>
-              <span class="badge badge--noventas">1992</span>
-            </div>
-            <p class="disco-card__meta">Álbum de estudio</p>
-            <p class="disco-card__desc">
-              Disco experimental donde exploran sonidos cercanos al shoegaze, al noise y al
-              rock alternativo.
-            </p>
-            <ul class="disco-card__tracks">
-              <li>Primavera 0</li>
-              <li>En remolinos</li>
-              <li>Luna roja</li>
-              <li>Claroscuro</li>
-            </ul>
-            <p class="disco-card__links">
-              <a
-                href="https://open.spotify.com/album/4bfwXuecOmNVlPM5RStAiQ"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Escuchar álbum en Spotify
-              </a>
-            </p>
-          </article>
-
-          <!-- SUEÑO STEREO (1995) -->
-          <article class="disco-card">
-            <div class="disco-card__header">
-              <h3 class="disco-card__title">Sueño Stereo</h3>
-              <span class="badge badge--dosmil">1995</span>
-            </div>
-            <p class="disco-card__meta">Álbum de estudio</p>
-            <p class="disco-card__desc">
-              Último álbum de estudio de Soda Stereo, con un sonido más experimental y
-              sofisticado.
-            </p>
-            <ul class="disco-card__tracks">
-              <li>Ella usó mi cabeza como un revólver</li>
-              <li>Zoom</li>
-              <li>Paseando por Roma</li>
-              <li>Crema de estrellas</li>
-            </ul>
-            <p class="disco-card__links">
-              <a
-                href="https://open.spotify.com/album/1A3VRbn7Kto2ov0LkSY0eg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Escuchar álbum en Spotify
-              </a>
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- GIRAS DESTACADAS (TABLA) -->
-    <section class="page-section page-section--alt">
-      <div class="container">
-        <h2 class="section-title">Giras destacadas</h2>
-
-        <div class="table-wrapper">
-          <table class="tours-table">
-            <thead>
-              <tr>
-                <th>Gira</th>
-                <th>Años</th>
-                <th>Álbum asociado</th>
-                <th>Descripción</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Gira Signos</td>
-                <td>1986–1987</td>
-                <td>Signos</td>
-                <td>
-                  Gira continental que consolidó a la banda en toda Latinoamérica, con
-                  presentaciones en grandes escenarios.
-                </td>
-              </tr>
-              <tr>
-                <td>Gira Animal</td>
-                <td>1990–1992</td>
-                <td>Canción Animal</td>
-                <td>
-                  Tour maratónico por América y Europa, incluyendo el histórico show en la
-                  Av. 9 de Julio en Buenos Aires.
-                </td>
-              </tr>
-              <tr>
-                <td>Me Verás Volver</td>
-                <td>2007</td>
-                <td>Repertorio de toda su carrera</td>
-                <td>
-                  Gira de reunión con múltiples fechas en estadios, que repasó los grandes
-                  hits de Soda Stereo.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Soda Stereo. Todos los derechos reservados.</p>
-    <div class="redes-sociales">
-      <a href="https://www.facebook.com/sodastereo" target="_blank" rel="noopener noreferrer">
-        Facebook
-      </a>
-      <a href="https://www.instagram.com/sodastereo" target="_blank" rel="noopener noreferrer">
-        Instagram
-      </a>
-      <a href="https://twitter.com/sodastereo" target="_blank" rel="noopener noreferrer">
-        Twitter
-      </a>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  ></script>
-</body>
+        applyFilter("all");
+      })();
+    </script>
+  </body>
 </html>
