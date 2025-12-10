@@ -103,9 +103,8 @@ p {
  * Uso de mixins: @include smooth-transition, @include fade-in-up
  */
 .main-header {
-  background: linear-gradient(90deg, rgba(2, 6, 23, 0.95), rgba(17, 24, 39, 0.95));
+  background: linear-gradient(90deg, #020617, #111827);
   border-bottom: 1px solid rgba(226, 232, 240, 0.25);
-  backdrop-filter: blur(6px);
 }
 
 .main-nav {
@@ -162,7 +161,7 @@ p {
   padding-bottom: 0.25rem;
   color: #ffffff !important;
   opacity: 0.9;
-  transition: color 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+  transition: color opacity 0.15s ease;
 }
 .main-nav .navbar-nav .nav-link::after {
   content: "";
@@ -312,7 +311,7 @@ p {
 
 .page-section,
 .home-section {
-  padding-block: 4rem;
+  padding-block: 3.5rem;
   background-color: #111827;
 }
 @media (max-width: 1023px) {
@@ -344,7 +343,7 @@ p {
  * Uso de mixins: @include smooth-transition, @include fade-in-up
  */
 footer {
-  border-top: 1px solid rgba(249, 115, 22, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-block: 1.5rem;
   background-color: #0a0e1a;
   text-align: center;
@@ -400,7 +399,6 @@ footer .redes-sociales a:nth-child(3) {
   border: 1px solid rgba(226, 232, 240, 0.25);
   box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
 }
-
 
 .btn {
   display: inline-block;
