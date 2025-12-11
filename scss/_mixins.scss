@@ -1,11 +1,10 @@
 @use "variables" as *;
-/**
- * Mixins SASS
- * Uso de mixins: bloques de código reutilizables con parámetros
- * Uso de operadores: operación matemática (resta) en media queries
- */
+// Mixins SASS del proyecto
+// Sirven para reutilizar estilos con parámetros
+// Incluyen soporte responsivo y animaciones
 
-// Mixin para media queries responsivas con operador matemático (-)
+// Mixin de media queries responsivas
+// Usa los breakpoints y permite anidar contenido
 @mixin respond-to($breakpoint) {
   @if $breakpoint == mobile {
     @media (max-width: ($bp-mobile - 1px)) {
@@ -22,12 +21,14 @@
   }
 }
 
-// Mixin con parámetros opcionales para sombras
+// Sombras suaves para tarjetas y bloques
+// Permite ajustar blur y opacidad
 @mixin soft-shadow($blur: 30px, $opacity: 0.45, $spread: 0) {
   box-shadow: 0 12px $blur $spread rgba(0, 0, 0, $opacity);
 }
 
-// Mixin para títulos con nesting: incluye media query dentro
+// Estilo de títulos de sección
+// Ajusta tamaño según el dispositivo
 @mixin section-title {
   font-size: clamp(1.5rem, 3vw, 2rem);
   letter-spacing: 0.14em;
@@ -40,12 +41,14 @@
   }
 }
 
-// Mixin para transiciones usando interpolación #{}
+// Transiciones suaves
+// Recibe propiedades, duración y aceleración
 @mixin smooth-transition($properties: all, $duration: 0.3s, $easing: ease) {
   transition: #{$properties} $duration $easing;
 }
 
-// Mixin con nesting: incluye selector &:hover dentro
+// Efecto de elevación en hover
+// Agrega sombra y ligero desplazamiento
 @mixin hover-lift($translate: -4px, $shadow: 0 18px 45px rgba(0, 0, 0, 0.55)) {
   @include smooth-transition(transform box-shadow, 0.2s);
   
@@ -55,7 +58,8 @@
   }
 }
 
-// Mixin para animaciones con parámetros
+// Animación de entrada hacia arriba
+// Recibe demora y duración
 @mixin fade-in-up($delay: 0s, $duration: 0.6s) {
   animation: fadeInUp $duration ease-out $delay both;
 }

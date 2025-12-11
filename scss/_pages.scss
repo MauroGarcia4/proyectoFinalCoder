@@ -8,6 +8,9 @@
  */
 
 // HOME
+// Este bloque define el hero principal
+// Ajusta imagen, texto y acciones para cada tamaño
+// y aplica transiciones suaves en títulos
 .hero {
   position: relative;
   min-height: 70vh;
@@ -18,12 +21,18 @@
     ),
     url("../img/soda_header.jpg") center/cover no-repeat;
 
+  
+  // Esta capa oscura mejora la lectura del texto
+  // Cubre toda el área del hero con un degradado
   &__overlay {
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at top, transparent 0%, $color-bg 65%);
   }
 
+  
+  // Contenedor del contenido del hero
+  // Centra verticalmente y adapta el ancho
   &__content {
     position: relative;
     padding-block: 4rem;
@@ -99,6 +108,9 @@
     }
   }
 
+  
+  // Acciones del hero: botones principales
+  // Se vuelven apilados en móviles
   &__actions {
     display: flex;
     gap: $spacing-sm;

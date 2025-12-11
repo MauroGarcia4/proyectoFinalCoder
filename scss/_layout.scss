@@ -218,7 +218,9 @@
     padding-block: 2rem;
   }
 
-  // Hero Banda: imagen de fondo con overlay
+  // Hero Banda
+  // Usa una foto de Cerati y un degradado oscuro
+  // Ajusta la posición en móviles para mostrar mejor la imagen
   &--banda {
     background: linear-gradient(
         to bottom,
@@ -233,7 +235,9 @@
     }
   }
 
-  // Hero Discografía: imagen de fondo con overlay
+  // Hero Discografía
+  // Usa la tapa de Signos con overlay
+  // Centra la imagen en pantallas pequeñas
   &--discografia {
     background: linear-gradient(
         to bottom,
@@ -248,7 +252,9 @@
     }
   }
 
-  // Hero Contacto: imagen de fondo con overlay
+  // Hero Contacto
+  // Usa una imagen de la banda y un overlay
+  // Centra la foto en móviles para mejor recorte
   &--contacto {
     background: linear-gradient(
         to bottom,

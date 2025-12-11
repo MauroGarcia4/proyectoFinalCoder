@@ -240,15 +240,13 @@
 
 // -------- Grillas (cards / discos) --------
 
-.cards-grid,
-.discos-grid {
+// Este bloque define una grilla de tres columnas
+// Se reduce a dos en tablet y a una en móvil
+// Se usa como base con @extend para evitar duplicar reglas
+%grid-3cols {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
-
-  > .card {
-    height: 100%;
-  }
 
   @include respond-to(tablet) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -259,6 +257,22 @@
     grid-template-columns: 1fr;
     gap: $spacing-md;
   }
+}
+
+.cards-grid {
+  // Grilla para tarjetas genéricas
+  // Garantiza que cada card ocupe toda la altura
+  @extend %grid-3cols;
+
+  > .card {
+    height: 100%;
+  }
+}
+
+.discos-grid {
+  // Grilla para tarjetas de discos
+  // Reutiliza el mismo layout que cards-grid
+  @extend %grid-3cols;
 }
 
 // -------- Timeline --------
@@ -377,6 +391,8 @@
 
 // -------- Chips de filtro --------
 
+// Lista de chips que actúan como filtros
+// Se acomodan y envuelven según el espacio disponible
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -387,6 +403,8 @@
   }
 }
 
+// Cada chip es un botón con estados de hover y active
+// Incluye accesibilidad con outline visible
 .chip {
   padding: 0.35rem 0.9rem;
   border-radius: $filter-radius;

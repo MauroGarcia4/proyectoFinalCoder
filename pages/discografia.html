@@ -70,6 +70,19 @@
 
     <!-- Estilos propios -->
     <link rel="stylesheet" href="../css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Soda Stereo - Discografía",
+        "url": "https://sodastereo.local/pages/discografia.html",
+        "inLanguage": "es-AR",
+        "about": {
+          "@type": "MusicGroup",
+          "name": "Soda Stereo"
+        }
+      }
+    </script>
   </head>
   <body>
     <a href="#main" class="skip-link">Saltar al contenido</a>
@@ -985,6 +998,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       (function () {
+        // Este bloque maneja los filtros por década
+        // Crea un indicador con la cantidad visible
+        // y aplica la selección en toda la grilla
         const chipsContainer = document.getElementById("chips-filtro");
         const cards = document.querySelectorAll(".disco-card");
         const statusEl = document.createElement("p");
@@ -1016,6 +1032,8 @@
           }
         }
 
+        // Este listener delega el clic en los chips
+        // Cambia el estado activo y ejecuta el filtro
         chipsContainer?.addEventListener("click", (ev) => {
           const target = ev.target;
           const chip =
@@ -1032,6 +1050,8 @@
 
         applyFilter("all");
 
+        // Este bloque controla el acordeón de canciones
+        // Mantiene solo una lista abierta y actualiza aria-expanded
         const allTrackDetails = Array.from(
           document.querySelectorAll("details.album-tracks")
         );
@@ -1054,6 +1074,8 @@
           });
         });
 
+        // Este listener captura clics en cualquier summary
+        // Cierra las otras listas para evitar aperturas múltiples
         document.addEventListener(
           "click",
           (ev) => {

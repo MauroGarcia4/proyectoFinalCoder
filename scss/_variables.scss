@@ -1,9 +1,7 @@
 @use "sass:color";
-/**
- * Variables SASS
- * Uso de variables: almacenamiento de valores reutilizables (colores, tipografía, espaciados)
- * Uso de operadores: funciones lighten() para generar colores hover dinámicamente
- */
+// Variables SASS del proyecto
+// Guardan colores, tipografías y tamaños
+// Se usan en todos los módulos para mantener coherencia
 
 // Colores base
 $color-bg: #0f172a;
@@ -11,21 +9,22 @@ $color-surface: #1f2937;
 $color-surface-alt: #0b1220;
 $color-surface-elevated: #243248;
 
-$color-primary: #0ea5e9; // Celeste más vibrante y brillante
-$color-secondary: #f97316; // Naranja más intenso y cálido
+$color-primary: #0ea5e9; // Celeste vibrante
+$color-secondary: #f97316; // Naranja intenso
 $color-accent: $color-secondary;
 $color-light: #ffffff;
 $color-muted: #e2e8f0;
 $color-border: rgba(226, 232, 240, 0.35);
 
-// Operador matemático: función lighten() modifica color base
+// Colores para estados hover
+// Se calculan ajustando la luminosidad
 $color-primary-hover: color.adjust($color-primary, $lightness: 5%);
 $color-secondary-hover: color.adjust($color-secondary, $lightness: 6%);
 
 // Tipografía
 $font-main: "Poppins", sans-serif;
 
-// Tamaños de fuente (valores mínimos para legibilidad web)
+// Tamaños de letra pensados para buena lectura
 $font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
 $font-size-base: 1rem;
@@ -34,7 +33,7 @@ $font-size-xl: 1.25rem;
 $font-size-2xl: 1.5rem;
 $font-size-3xl: 2rem;
 
-// Espaciados
+// Espaciados uniformes para márgenes y paddings
 $spacing-xs: 0.5rem;
 $spacing-sm: 0.75rem;
 $spacing-md: 1rem;
@@ -42,35 +41,32 @@ $spacing-lg: 1.5rem;
 $spacing-xl: 2.5rem;
 $spacing-2xl: 3.5rem;
 
-// Border radius
+// Bordes redondeados para tarjetas y botones
 $radius-sm: 10px;
 $radius-md: 12px;
 $radius-lg: 16px;
 $radius-full: 999px;
 
-// Breakpoints
+// Puntos de corte para responsive
 $bp-mobile: 768px;
 $bp-tablet: 1024px;
 $bp-desktop: 1200px;
 
-// Duraciones de animación
+// Duraciones base para transiciones y animaciones
 $transition-fast: 0.15s;
 $transition-base: 0.2s;
 $transition-slow: 0.3s;
 $transition-slower: 0.6s;
 
-/**
- * Mapa SASS con operador @each
- * Genera clases dinámicamente para badges de décadas (ochentas, noventas, dosmil)
- */
+// Mapa de colores por década
+// Se usa para generar las clases de badges
 $decadas: (
-  ochentas: #06b6d4,
-  // Cyan más vibrante
-  noventas: #8b5cf6,
-  // Púrpura más intenso
-  dosmil: #10b981 // Verde más brillante,,,,,
+  ochentas: #06b6d4, // Cyan más vibrante
+  noventas: #8b5cf6, // Púrpura intenso
+  dosmil: #10b981 // Verde brillante
 );
 
+// Estilos base para chips de filtros
 $filter-bg: rgba(15, 23, 42, 0.6);
 $filter-text: $color-light;
 $filter-hover-bg: rgba(249, 115, 22, 0.18);
