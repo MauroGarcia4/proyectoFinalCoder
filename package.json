@@ -19,8 +19,6 @@
   },
   "homepage": "https://github.com/MauroGarcia4/Entrega2_Garcia#readme",
   "devDependencies": {
-    "install": "^0.13.0",
-    "npm": "^11.6.2",
     "sass": "^1.94.0"
   }
 }

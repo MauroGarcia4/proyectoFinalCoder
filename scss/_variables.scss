@@ -6,17 +6,17 @@
  */
 
 // Colores base
-$color-bg: #0a0e1a;
-$color-surface: #111827;
-$color-surface-alt: #020617;
-$color-surface-elevated: #1a1f2e;
+$color-bg: #0f172a;
+$color-surface: #1f2937;
+$color-surface-alt: #0b1220;
+$color-surface-elevated: #243248;
 
 $color-primary: #0ea5e9; // Celeste más vibrante y brillante
 $color-secondary: #f97316; // Naranja más intenso y cálido
 $color-accent: $color-secondary;
 $color-light: #ffffff;
 $color-muted: #e2e8f0;
-$color-border: rgba(226, 232, 240, 0.25);
+$color-border: rgba(226, 232, 240, 0.35);
 
 // Operador matemático: función lighten() modifica color base
 $color-primary-hover: color.adjust($color-primary, $lightness: 5%);
@@ -71,7 +71,7 @@ $decadas: (
   dosmil: #10b981 // Verde más brillante,,,,,
 );
 
-$filter-bg: rgba(15, 23, 42, 0.9);
+$filter-bg: rgba(15, 23, 42, 0.6);
 $filter-text: $color-light;
 $filter-hover-bg: rgba(249, 115, 22, 0.18);
 $filter-hover-border: $color-secondary;

@@ -164,8 +164,8 @@
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.6),
-      rgba(10, 14, 26, 0.85)
+      rgba(0, 0, 0, 0.5),
+      rgba(10, 14, 26, 0.7)
     );
     z-index: 0;
   }
@@ -295,6 +295,65 @@
 
 .home-section--dark {
   background-color: color.adjust($color-surface, $lightness: -4%);
+}
+
+footer {
+  border-top: 1px solid $color-border;
+  background: linear-gradient(90deg, $color-surface-alt, $color-surface);
+  padding-block: $spacing-md;
+
+  .redes-sociales {
+    display: flex;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: $font-size-sm;
+      color: $color-muted;
+      @include smooth-transition(color, $transition-fast);
+
+      &:hover {
+        color: $color-secondary;
+      }
+
+      .social-icon {
+        width: 16px;
+        height: 16px;
+        opacity: 0.85;
+      }
+    }
+  }
+
+  // .site-credits eliminado: bloque trasladado a Contacto como .contact-socials
+
+  .footer-link {
+    /* textual style retained if used */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: $font-size-sm;
+    color: $color-muted;
+    text-decoration: none;
+    @include smooth-transition(color, $transition-fast);
+
+    &:hover {
+      color: $color-secondary;
+      text-decoration: underline;
+      text-underline-offset: 0.16em;
+    }
+
+    .social-icon {
+      width: 16px;
+      height: 16px;
+      opacity: 0.85;
+    }
+  }
 }
 
 /**

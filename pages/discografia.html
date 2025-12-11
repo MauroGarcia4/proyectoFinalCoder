@@ -7,7 +7,37 @@
       name="description"
       content="Discografía completa de Soda Stereo: álbumes, canciones y giras destacadas."
     />
-    <title>Soda Stereo - Discografía</title>
+    <title>Soda Stereo - Discografía completa</title>
+    <meta
+      name="keywords"
+      content="Soda Stereo, discografía, álbumes, EP, en vivo, compilaciones, canciones"
+    />
+    <link
+      rel="canonical"
+      href="https://sodastereo.local/pages/discografia.html"
+    />
+    <meta property="og:title" content="Soda Stereo - Discografía completa" />
+    <meta
+      property="og:description"
+      content="Discografía completa de Soda Stereo: álbumes de estudio, EP, en vivo y compilaciones, con fechas, canciones y certificaciones."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../img/soda_destacada.jpg" />
+    <meta property="og:locale" content="es_ES" />
+    <meta
+      property="og:url"
+      content="https://sodastereo.local/pages/discografia.html"
+    />
+    <meta property="og:site_name" content="Soda Stereo" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Soda Stereo - Discografía completa" />
+    <meta
+      name="twitter:description"
+      content="Discografía completa de Soda Stereo: álbumes de estudio, EP, en vivo y compilaciones, con fechas, canciones y certificaciones."
+    />
+    <meta name="twitter:image" content="../img/soda_destacada.jpg" />
 
     <!-- Favicon -->
     <link
@@ -116,6 +146,19 @@
         </div>
       </section>
 
+      <nav class="discografia-nav" aria-label="Navegación de discografía">
+        <div class="container">
+          <a href="#estudio" class="discografia-nav__link"
+            >Álbumes de estudio</a
+          >
+          <a href="#ep" class="discografia-nav__link">EP</a>
+          <a href="#en-vivo" class="discografia-nav__link">En vivo</a>
+          <a href="#recopilatorios" class="discografia-nav__link"
+            >Recopilatorios</a
+          >
+        </div>
+      </nav>
+
       <!-- FILTROS (decorativos) -->
       <section class="page-section page-section--filters">
         <div class="container">
@@ -146,12 +189,19 @@
             >
               Años 90
             </button>
+            <button
+              class="chip"
+              type="button"
+              data-filter="2000"
+              aria-pressed="false"
+            >
+              Años 2000
+            </button>
           </div>
         </div>
       </section>
 
-      <!-- ÁLBUMES -->
-      <section class="page-section">
+      <section id="estudio" class="page-section">
         <div class="container">
           <h2 class="section-title">Álbumes de estudio</h2>
 
@@ -167,12 +217,40 @@
                 Debut de la banda, con un sonido influenciado por el new wave y
                 el post-punk, que presentó a Soda Stereo en toda la región.
               </p>
-              <ul class="disco-card__tracks">
-                <li>¿Por qué no puedo ser del Jet-Set?</li>
-                <li>Sobredosis de TV</li>
-                <li>Te hacen falta vitaminas</li>
-                <li>Trátame suavemente</li>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_soda.jpg"
+                  alt="Portada del álbum Soda Stereo (1984)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <ul class="album-meta">
+                <li><strong>Fecha:</strong> 27/08/1984</li>
+                <li><strong>Sello:</strong> CBS / Sony</li>
+                <li>
+                  <strong>Certificaciones:</strong> Platino (AR), Doble Platino
+                  (PE, CL)
+                </li>
               </ul>
+              <details class="album-tracks">
+                <summary>Lista de canciones</summary>
+                <ul class="disco-card__tracks">
+                  <li>¿Por qué no puedo ser del Jet-Set?</li>
+                  <li>Sobredosis de TV</li>
+                  <li>Te hacen falta vitaminas</li>
+                  <li>Trátame suavemente</li>
+                  <li>Dietético</li>
+                  <li>Tele-Ka</li>
+                  <li>Ni un segundo</li>
+                  <li>Un misil en mi placard</li>
+                  <li>El tiempo es dinero</li>
+                  <li>Afrodisíacos</li>
+                  <li>Mi novia tiene bíceps</li>
+                </ul>
+              </details>
               <p class="disco-card__links">
                 <a
                   href="https://open.spotify.com/album/6kHPvk54969ASAIfDRUfwv"
@@ -195,12 +273,36 @@
                 Disco que consolidó el sonido de la banda y los llevó a una
                 audiencia masiva en toda Latinoamérica.
               </p>
-              <ul class="disco-card__tracks">
-                <li>Nada personal</li>
-                <li>Cuando pase el temblor</li>
-                <li>Juegos de seducción</li>
-                <li>Imágenes retro</li>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_nada.jpeg"
+                  alt="Portada del álbum Nada Personal (1985)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <ul class="album-meta">
+                <li><strong>Fecha:</strong> 21/11/1985</li>
+                <li><strong>Sello:</strong> CBS / Sony</li>
+                <li><strong>Certificaciones:</strong> Platino (AR)</li>
               </ul>
+              <details class="album-tracks">
+                <summary>Lista de canciones</summary>
+                <ul class="disco-card__tracks">
+                  <li>Nada personal</li>
+                  <li>Si no fuera por...</li>
+                  <li>Cuando pase el temblor</li>
+                  <li>Danza rota</li>
+                  <li>El cuerpo del delito</li>
+                  <li>Juego de seducción</li>
+                  <li>Estoy azulado</li>
+                  <li>Observándonos (Satélites)</li>
+                  <li>Imágenes retro</li>
+                  <li>Ecos</li>
+                </ul>
+              </details>
               <p class="disco-card__links">
                 <a
                   href="https://open.spotify.com/album/0hyq754QnaKHYpH32QnWqs"
@@ -223,12 +325,34 @@
                 Uno de los discos más influyentes del rock en español, con un
                 sonido más oscuro y sofisticado.
               </p>
-              <ul class="disco-card__tracks">
-                <li>Signos</li>
-                <li>Persiana americana</li>
-                <li>Prófugos</li>
-                <li>Final caja negra</li>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_signos.jpg"
+                  alt="Portada del álbum Signos (1986)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <ul class="album-meta">
+                <li><strong>Fecha:</strong> 10/11/1986</li>
+                <li><strong>Sello:</strong> CBS / Sony</li>
+                <li><strong>Certificaciones:</strong> Platino (AR)</li>
               </ul>
+              <details class="album-tracks">
+                <summary>Lista de canciones</summary>
+                <ul class="disco-card__tracks">
+                  <li>Sin sobresaltos</li>
+                  <li>El rito</li>
+                  <li>Prófugos</li>
+                  <li>No existes</li>
+                  <li>Persiana americana</li>
+                  <li>En camino</li>
+                  <li>Signos</li>
+                  <li>Final caja negra</li>
+                </ul>
+              </details>
               <p class="disco-card__links">
                 <a
                   href="https://open.spotify.com/album/7s2lDvm4FwnWE5RXEoY8Gi"
@@ -251,12 +375,34 @@
                 Grabado en Nueva York, con un sonido más cercano al funk y al
                 pop, producido por Carlos Alomar.
               </p>
-              <ul class="disco-card__tracks">
-                <li>En la ciudad de la furia</li>
-                <li>Lo que sangra (La cúpula)</li>
-                <li>Corazón delator</li>
-                <li>Picnic en el 4° B</li>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_doblevida.png"
+                  alt="Portada del álbum Doble Vida (1988)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <ul class="album-meta">
+                <li><strong>Fecha:</strong> 15/09/1988</li>
+                <li><strong>Sello:</strong> CBS / Sony</li>
+                <li><strong>Certificaciones:</strong> Platino (AR)</li>
               </ul>
+              <details class="album-tracks">
+                <summary>Lista de canciones</summary>
+                <ul class="disco-card__tracks">
+                  <li>En la ciudad de la furia</li>
+                  <li>Lo que sangra (La cúpula)</li>
+                  <li>Corazón delator</li>
+                  <li>Picnic en el 4° B</li>
+                  <li>Día común - Doble vida</li>
+                  <li>El ritmo de tus ojos</li>
+                  <li>En el borde</li>
+                  <li>Terapia de amor intensiva</li>
+                </ul>
+              </details>
               <p class="disco-card__links">
                 <a
                   href="https://open.spotify.com/album/0mEY1U7SZdIwDWylFm2UC4"
@@ -279,12 +425,36 @@
                 Considerado por muchos como el mejor disco de la banda, con un
                 rock más crudo y directo.
               </p>
-              <ul class="disco-card__tracks">
-                <li>De música ligera</li>
-                <li>Un millón de años luz</li>
-                <li>Té para tres</li>
-                <li>Canción animal</li>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_cancionanimal.png"
+                  alt="Portada del álbum Canción Animal (1990)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <ul class="album-meta">
+                <li><strong>Fecha:</strong> 07/08/1990</li>
+                <li><strong>Sello:</strong> Sony / Columbia</li>
+                <li><strong>Certificaciones:</strong> 500.000 (AR)</li>
               </ul>
+              <details class="album-tracks">
+                <summary>Lista de canciones</summary>
+                <ul class="disco-card__tracks">
+                  <li>(En) El séptimo día</li>
+                  <li>Un millón de años luz</li>
+                  <li>De música ligera</li>
+                  <li>Hombre al agua</li>
+                  <li>Entre caníbales</li>
+                  <li>Té para tres</li>
+                  <li>Canción animal</li>
+                  <li>1990</li>
+                  <li>Sueles dejarme solo</li>
+                  <li>Cae el sol</li>
+                </ul>
+              </details>
               <p class="disco-card__links">
                 <a
                   href="https://open.spotify.com/album/4bTGicFQB7ll0o5HN5R1T2"
@@ -307,12 +477,38 @@
                 Disco experimental donde exploran sonidos cercanos al shoegaze,
                 al noise y al rock alternativo.
               </p>
-              <ul class="disco-card__tracks">
-                <li>Primavera 0</li>
-                <li>En remolinos</li>
-                <li>Luna roja</li>
-                <li>Claroscuro</li>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_dinamo.jpg"
+                  alt="Portada del álbum Dynamo (1992)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <ul class="album-meta">
+                <li><strong>Fecha:</strong> 26/10/1992</li>
+                <li><strong>Sello:</strong> Sony</li>
+                <li><strong>Certificaciones:</strong> Doble Platino (AR)</li>
               </ul>
+              <details class="album-tracks">
+                <summary>Lista de canciones</summary>
+                <ul class="disco-card__tracks">
+                  <li>Secuencia inicial</li>
+                  <li>Toma la ruta</li>
+                  <li>En remolinos</li>
+                  <li>Primavera 0</li>
+                  <li>Camaleón</li>
+                  <li>Sweet sahumerio</li>
+                  <li>Ameba</li>
+                  <li>Nuestra fe</li>
+                  <li>Luna roja</li>
+                  <li>Claroscuro</li>
+                  <li>Texturas</li>
+                  <li>Fue</li>
+                </ul>
+              </details>
               <p class="disco-card__links">
                 <a
                   href="https://open.spotify.com/album/4bfwXuecOmNVlPM5RStAiQ"
@@ -335,12 +531,40 @@
                 Último álbum de estudio de Soda Stereo, con un sonido más
                 experimental y sofisticado.
               </p>
-              <ul class="disco-card__tracks">
-                <li>Ella usó mi cabeza como un revólver</li>
-                <li>Zoom</li>
-                <li>Paseando por Roma</li>
-                <li>Crema de estrellas</li>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_sueñastereo.jpeg"
+                  alt="Portada del álbum Sueño Stereo (1995)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <ul class="album-meta">
+                <li><strong>Fecha:</strong> 21/06/1995</li>
+                <li><strong>Sello:</strong> BMG Ariola / Sony</li>
+                <li>
+                  <strong>Certificaciones:</strong> Platino (AR), Oro (US RIAA)
+                </li>
               </ul>
+              <details class="album-tracks">
+                <summary>Lista de canciones</summary>
+                <ul class="disco-card__tracks">
+                  <li>Ella usó mi cabeza como un revólver</li>
+                  <li>Disco eterno</li>
+                  <li>Zoom</li>
+                  <li>Ojo de la tormenta</li>
+                  <li>Efecto Doppler</li>
+                  <li>Paseando por Roma</li>
+                  <li>Pasos</li>
+                  <li>Ángel eléctrico</li>
+                  <li>Crema de estrellas</li>
+                  <li>Planta</li>
+                  <li>X-Playo</li>
+                  <li>Moirè</li>
+                </ul>
+              </details>
               <p class="disco-card__links">
                 <a
                   href="https://open.spotify.com/album/1A3VRbn7Kto2ov0LkSY0eg"
@@ -349,6 +573,315 @@
                 >
                   Escuchar álbum en Spotify
                 </a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="ep" class="page-section page-section--alt">
+        <div class="container">
+          <h2 class="section-title">EP</h2>
+          <div class="discos-grid">
+            <article class="disco-card" data-decade="80" data-year="1989">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Languis</h3>
+                <span class="badge badge--ochentas">1989</span>
+              </div>
+              <p class="disco-card__meta">EP</p>
+              <p class="disco-card__desc">
+                Incluye nuevas versiones y remixes, con el inédito «Mundo de
+                quimeras».
+              </p>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_languis.png"
+                  alt="Portada del EP Languis (1989)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <details class="album-tracks">
+                <summary>Lista de canciones</summary>
+                <ul class="disco-card__tracks">
+                  <li>Mundo de quimeras</li>
+                  <li>Los languis (Nueva versión)</li>
+                  <li>En el borde (Remix)</li>
+                  <li>Lo que sangra (La cúpula) (Remix)</li>
+                </ul>
+              </details>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/intl-es/album/0m1Jpz8kxFIewCTy2NdkVt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Escuchar en Spotify</a
+                >
+              </p>
+            </article>
+
+            <article class="disco-card" data-decade="90" data-year="1991">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Rex Mix</h3>
+                <span class="badge badge--noventas">1991</span>
+              </div>
+              <p class="disco-card__meta">EP</p>
+              <p class="disco-card__desc">
+                EP de transición con remixes y versiones en vivo.
+              </p>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_rexmix.png"
+                  alt="Portada del EP Rex Mix (1991)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <details class="album-tracks">
+                <summary>Lista de canciones</summary>
+                <ul class="disco-card__tracks">
+                  <li>Hombre Al Agua (En vivo)</li>
+                  <li>No Existes (En vivo)</li>
+                  <li>En Camino - (Viva La Patria Mix)</li>
+                  <li>No Necesito Verte (Para Saberlo)(Krupa Mix)</li>
+                  <li>En Camino (Veranek Mix)</li>
+                  <li>No Necesito Verte (Para Saberlo)-Candombe Mix</li>
+                </ul>
+              </details>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/intl-es/album/6KFTwdq82vVubN0p8rhQBy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Escuchar en Spotify</a
+                >
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="en-vivo" class="page-section">
+        <div class="container">
+          <h2 class="section-title">Álbumes en vivo</h2>
+          <div class="discos-grid">
+            <article class="disco-card" data-decade="80" data-year="1987">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Ruido Blanco</h3>
+                <span class="badge badge--ochentas">1987</span>
+              </div>
+              <p class="disco-card__meta">En vivo</p>
+              <p class="disco-card__desc">
+                Registrado durante la gira latinoamericana de 1986-1987.
+              </p>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_ruidoblanco.png"
+                  alt="Portada del álbum Ruido Blanco (1987)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <details class="album-tracks">
+                <summary>Lista de canciones destacadas</summary>
+                <ul class="disco-card__tracks">
+                  <li>Vita-Set (En vivo)</li>
+                  <li>Sobredosis de TV (En vivo)</li>
+                  <li>Juego de seducción (En vivo)</li>
+                  <li>Cuando pase el temblor (En vivo)</li>
+                  <li>Signos (En vivo)</li>
+                  <li>Persiana americana (En vivo)</li>
+                  <li>Prófugos (En vivo)</li>
+                </ul>
+              </details>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/intl-es/album/6z81m2leo8lolKaXnxgBDO"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Escuchar en Spotify</a
+                >
+              </p>
+            </article>
+
+            <article class="disco-card" data-decade="90" data-year="1996">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Comfort y música para volar</h3>
+                <span class="badge badge--noventas">1996</span>
+              </div>
+              <p class="disco-card__meta">MTV Unplugged</p>
+              <p class="disco-card__desc">
+                Sesión icónica con arreglos acústicos y temas inéditos.
+              </p>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_cympv.jpeg"
+                  alt="Portada del álbum Comfort y música para volar (1996)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <details class="album-tracks">
+                <summary>Lista de canciones destacadas</summary>
+                <ul class="disco-card__tracks">
+                  <li>Ella usó mi cabeza como un revólver</li>
+                  <li>En la ciudad de la furia</li>
+                  <li>Un misil en mi placard</li>
+                  <li>Génesis</li>
+                </ul>
+              </details>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/album/2wqk2m1Vbun0Jk6fS3D3KQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Escuchar en Spotify</a
+                >
+              </p>
+            </article>
+
+            <article class="disco-card" data-decade="90" data-year="1997">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">El último concierto A/B</h3>
+                <span class="badge badge--noventas">1997</span>
+              </div>
+              <p class="disco-card__meta">En vivo</p>
+              <p class="disco-card__desc">
+                Registro de la gira despedida con dos volúmenes.
+              </p>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_ladoab.png"
+                  alt="Portada del álbum El último concierto A/B (1997)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <details class="album-tracks">
+                <summary>Lista de canciones destacadas</summary>
+                <ul class="disco-card__tracks">
+                  <li>El último concierto A</li>
+                  <li>El último concierto B</li>
+                </ul>
+              </details>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/album/3QTxxZucih0hympCczXXuO?si=iD1RJWmBR-CxDk0KnaPtlA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Escuchar A</a
+                >
+                ·
+                <a
+                  href="https://open.spotify.com/album/0k9Oh11PrdeZ6ngoJGhWMk?si=GmwVFCgRRgiECn9jxEwVwQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Escuchar B</a
+                >
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="recopilatorios" class="page-section page-section--alt">
+        <div class="container">
+          <h2 class="section-title">Recopilatorios</h2>
+          <div class="discos-grid">
+            <article class="disco-card" data-decade="90" data-year="1994">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">20 grandes éxitos</h3>
+                <span class="badge badge--noventas">1994</span>
+              </div>
+              <p class="disco-card__meta">Compilación</p>
+              <p class="disco-card__desc">
+                Selección de canciones 1984–1994. Platino en Argentina.
+              </p>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_20exitos.png"
+                  alt="Portada del recopilatorio 20 grandes éxitos (1994)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/intl-es/album/75LbseLsPdTkMO9oUD9J8n"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Escuchar en Spotify</a
+                >
+              </p>
+            </article>
+
+            <article class="disco-card" data-decade="2000" data-year="2000">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Obras cumbres</h3>
+                <span class="badge badge--dosmil">2001</span>
+              </div>
+              <p class="disco-card__meta">Compilación</p>
+              <p class="disco-card__desc">
+                Antología en dos volúmenes con versiones en vivo.
+              </p>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_obrascumbres.png"
+                  alt="Portada del recopilatorio Obras cumbres (2000)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/intl-es/album/7MqDgagaBfm7Cjlg7uzlAa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Escuchar en Spotify</a
+                >
+              </p>
+            </article>
+
+            <article class="disco-card" data-decade="2000" data-year="2007">
+              <div class="disco-card__header">
+                <h3 class="disco-card__title">Me verás volver (Hits & +)</h3>
+                <span class="badge badge--dosmil">2007</span>
+              </div>
+              <p class="disco-card__meta">Compilación</p>
+              <p class="disco-card__desc">
+                Recopilación de hits lanzada para la gira reunión.
+              </p>
+              <div class="disco-card__media">
+                <img
+                  class="album-cover"
+                  src="../img/tapa_meveras.png"
+                  alt="Portada del recopilatorio Me verás volver (2007)"
+                  loading="lazy"
+                  width="360"
+                  height="360"
+                />
+              </div>
+              <p class="disco-card__links">
+                <a
+                  href="https://open.spotify.com/intl-es/album/0IkprxBZTCQhSry1AsDxcb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Escuchar en Spotify</a
+                >
               </p>
             </article>
           </div>
@@ -452,13 +985,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       (function () {
-        const chips = document.querySelectorAll("#chips-filtro .chip");
+        const chipsContainer = document.getElementById("chips-filtro");
         const cards = document.querySelectorAll(".disco-card");
         const statusEl = document.createElement("p");
         statusEl.className = "filter-status";
         statusEl.style.marginTop = "0.5rem";
         statusEl.style.opacity = "0.85";
-        const chipsContainer = document.getElementById("chips-filtro");
         chipsContainer?.after(statusEl);
 
         function applyFilter(filter) {
@@ -466,9 +998,9 @@
             let visibleCount = 0;
             cards.forEach((card) => {
               const decade = card.getAttribute("data-decade");
-              const shouldShow = filter === "all" || decade === filter;
-              card.style.display = shouldShow ? "" : "none";
-              if (shouldShow) visibleCount++;
+              const show = filter === "all" || decade === filter;
+              card.classList.toggle("is-hidden", !show);
+              if (show) visibleCount++;
             });
             statusEl.textContent =
               visibleCount === 0
@@ -484,18 +1016,63 @@
           }
         }
 
-        chips.forEach((chip) => {
-          chip.addEventListener("click", () => {
-            const filter = chip.getAttribute("data-filter") || "all";
-            chips.forEach((c) => {
-              c.classList.toggle("chip--active", c === chip);
-              c.setAttribute("aria-pressed", c === chip ? "true" : "false");
-            });
-            applyFilter(filter);
+        chipsContainer?.addEventListener("click", (ev) => {
+          const target = ev.target;
+          const chip =
+            target instanceof Element ? target.closest(".chip") : null;
+          if (!chip) return;
+          const filter = chip.getAttribute("data-filter") || "all";
+          chipsContainer.querySelectorAll(".chip").forEach((c) => {
+            const active = c === chip;
+            c.classList.toggle("chip--active", active);
+            c.setAttribute("aria-pressed", active ? "true" : "false");
           });
+          applyFilter(filter);
         });
 
         applyFilter("all");
+
+        const allTrackDetails = Array.from(
+          document.querySelectorAll("details.album-tracks")
+        );
+        allTrackDetails.forEach((dt) => {
+          const sm = dt.querySelector("summary");
+          sm?.setAttribute("aria-expanded", dt.open ? "true" : "false");
+          dt.addEventListener("toggle", () => {
+            if (dt.open) {
+              sm?.setAttribute("aria-expanded", "true");
+              allTrackDetails.forEach((other) => {
+                if (other !== dt) {
+                  other.open = false;
+                  const os = other.querySelector("summary");
+                  os?.setAttribute("aria-expanded", "false");
+                }
+              });
+            } else {
+              sm?.setAttribute("aria-expanded", "false");
+            }
+          });
+        });
+
+        document.addEventListener(
+          "click",
+          (ev) => {
+            const target = ev.target;
+            const summary =
+              target instanceof Element ? target.closest("summary") : null;
+            if (!summary) return;
+            const dt = summary.parentElement;
+            if (!dt || !dt.matches("details.album-tracks")) return;
+            allTrackDetails.forEach((other) => {
+              if (other !== dt) {
+                other.open = false;
+                const os = other.querySelector("summary");
+                os?.setAttribute("aria-expanded", "false");
+              }
+            });
+          },
+          true
+        );
       })();
     </script>
   </body>

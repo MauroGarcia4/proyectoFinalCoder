@@ -13,10 +13,10 @@
   min-height: 70vh;
   background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.95)
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.85)
     ),
-    url("../img/soda_destacada.jpg") center/cover no-repeat;
+    url("../img/soda_header.jpg") center/cover no-repeat;
 
   &__overlay {
     position: absolute;
@@ -238,10 +238,10 @@
 
 .banda-page {
   &__integrantes {
-    margin-top: $spacing-lg;
+    margin-top: 0;
 
     @include respond-to(mobile) {
-      margin-top: $spacing-md;
+      margin-top: 0;
     }
   }
 
@@ -302,6 +302,49 @@
       margin-top: $spacing-md;
       gap: $spacing-md;
     }
+
+    > .disco-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // Navegación interna de la página de discografía
+  .discografia-nav {
+    position: sticky;
+    top: 0;
+    z-index: 15;
+    background-color: $color-surface-elevated;
+    border-bottom: 1px solid $color-border;
+
+    .container {
+      display: flex;
+      gap: $spacing-sm;
+      padding-block: $spacing-sm;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__link {
+      color: $color-muted;
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      @include smooth-transition(all, $transition-fast);
+
+      &:hover {
+        color: $color-secondary;
+        border-color: $color-secondary;
+        background-color: rgba(249, 115, 22, 0.08);
+      }
+
+      &:focus-visible {
+        outline: 2px solid $color-secondary;
+        outline-offset: 2px;
+      }
+    }
   }
 
   .disco-card {
@@ -349,6 +392,22 @@
       line-height: 1.5;
     }
 
+    &__media {
+      margin: $spacing-sm 0;
+      display: flex;
+      justify-content: center;
+
+      .album-cover {
+        width: 100%;
+        max-width: 360px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: $radius-md;
+        border: 1px solid $color-border;
+        @include soft-shadow(35px, 0.5);
+      }
+    }
+
     &__tracks {
       font-size: $font-size-sm;
       opacity: 0.96;
@@ -375,6 +434,66 @@
         }
       }
     }
+  }
+
+  // Empujar enlaces al fondo para uniformar altura visual
+  .disco-card__links {
+    margin-top: auto;
+  }
+
+  // Metadatos del álbum
+  .album-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 $spacing-sm 0;
+
+    li {
+      font-size: $font-size-sm;
+      color: $color-light;
+      opacity: 0.9;
+      line-height: 1.6;
+
+      strong {
+        color: $color-muted;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // Lista de canciones colapsable
+  .album-tracks {
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: $color-secondary;
+      @include smooth-transition(color, $transition-fast);
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      position: relative;
+      padding-right: 1.25rem;
+    }
+
+    summary::after {
+      content: "▸";
+      position: absolute;
+      right: 0;
+      color: $color-secondary;
+      @include smooth-transition(transform, $transition-fast);
+    }
+
+    &[open] summary::after {
+      content: "▾";
+      transform: rotate(0deg);
+    }
+  }
+
+  // Texto de estado para filtros
+  .filter-status {
+    font-size: $font-size-sm;
+    color: $color-muted;
   }
 }
 
@@ -567,109 +686,51 @@
       }
     }
   }
+
+  // Redes del creador en contacto
+  .contact-socials {
+    margin-top: $spacing-lg;
+    display: grid;
+    gap: $spacing-sm;
+
+    &__title {
+      font-size: $font-size-lg;
+      margin-bottom: 0.25rem;
+    }
+
+    &__links {
+      display: flex;
+      gap: $spacing-sm;
+      flex-wrap: wrap;
+
+      @include respond-to(mobile) {
+        flex-direction: column;
+        gap: $spacing-xs;
+      }
+    }
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: $font-size-sm;
+      color: $color-muted;
+      text-decoration: none;
+      @include smooth-transition(color, $transition-fast);
+
+      &:hover {
+        color: $color-secondary;
+        text-decoration: underline;
+        text-underline-offset: 0.18em;
+      }
+
+      .social-icon {
+        width: 18px;
+        height: 18px;
+        opacity: 0.9;
+      }
+    }
+  }
 }
 
 /* Eliminado: estilos de Noticias para cumplir "inicio + 3 páginas" */
-.home-section--features {
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
-
-    @include respond-to(tablet) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    @include respond-to(mobile) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .feature-item {
-    background-color: $color-surface-elevated;
-    border: 1px solid $color-border;
-    border-radius: $radius-lg;
-    padding: $spacing-lg;
-    @include soft-shadow(40px, 0.5);
-    @include fade-in-up(0s, 0.5s);
-  }
-
-  .feature-icon {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 0.5rem;
-    color: $color-secondary;
-  }
-
-  .feature-title {
-    font-size: $font-size-lg;
-    margin-bottom: 0.25rem;
-  }
-
-  .feature-text {
-    font-size: $font-size-sm;
-    color: $color-muted;
-  }
-}
-
-.home-section--reviews {
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
-
-    @include respond-to(tablet) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    @include respond-to(mobile) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .review {
-    background-color: $color-surface-elevated;
-    border: 1px solid $color-border;
-    border-radius: $radius-lg;
-    padding: $spacing-lg;
-    @include fade-in-up(0s, 0.5s);
-  }
-
-  .review-text {
-    font-size: $font-size-base;
-    margin-bottom: 0.5rem;
-  }
-
-  .review-author {
-    font-size: $font-size-sm;
-    color: $color-muted;
-  }
-}
-
-.home-section--cta {
-  .cta-card {
-    background: radial-gradient(circle at top, rgba(249, 115, 22, 0.12), rgba(2, 6, 23, 0.9));
-    border: 1px solid $color-border;
-    border-radius: $radius-lg;
-    padding: $spacing-2xl;
-    text-align: center;
-    @include soft-shadow(40px, 0.5);
-    @include fade-in-up(0s, 0.6s);
-  }
-
-  .cta-title {
-    font-size: $font-size-2xl;
-    margin-bottom: 0.25rem;
-  }
-
-  .cta-text {
-    font-size: $font-size-sm;
-    color: $color-muted;
-    margin-bottom: $spacing-md;
-  }
-
-  .cta-actions {
-    display: flex;
-    gap: $spacing-sm;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}

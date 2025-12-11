@@ -41,6 +41,11 @@ ul {
   list-style: none;
 }
 
+// Utilitario: ocultar elemento sin eliminar del flujo accesible
+.is-hidden {
+  display: none !important;
+}
+
 main {
   min-height: 70vh;
 
